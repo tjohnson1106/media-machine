@@ -1,10 +1,16 @@
 import React from "react";
 
 import "./App.css";
-import HeaderNav from "./HeaderNav";
+import HeaderNav from "./ui/HeaderNav";
+import SideBar from "./ui/SideBar";
 
 const App: React.FC = () => {
-  return <HeaderNav />;
+  return (
+    <>
+      <HeaderNav />
+      <SideBar />
+    </>
+  );
 };
 
 export default App;

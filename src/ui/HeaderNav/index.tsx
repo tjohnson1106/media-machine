@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Image, Menu, Form, Input, Icon } from "semantic-ui-react";
 
 import "./HeaderNav.scss";
-import logo from "../assets/images/logo.jpg";
+import "../../";
+import logo from "../../assets/images/logo.jpg";
 
 class HeaderNav extends Component {
   state = {};
