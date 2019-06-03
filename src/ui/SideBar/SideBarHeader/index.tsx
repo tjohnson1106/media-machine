@@ -2,7 +2,6 @@ import React from "react";
 import { Menu } from "semantic-ui-react";
 
 import "./SideBarHeader.scss";
-import { StringLiteral } from "@babel/types";
 
 interface Props {
   heading?: string | boolean;
