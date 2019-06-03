@@ -4,7 +4,7 @@ import { Icon, Menu, SemanticICONS } from "semantic-ui-react";
 import "./SideBarItem.scss";
 
 interface Props {
-  highlight: string;
+  highlight?: boolean;
   icon: SemanticICONS;
   label: string;
 }
