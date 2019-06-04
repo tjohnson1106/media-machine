@@ -1,6 +1,6 @@
 import React from "react";
 
-import "VideoGridHeader.scss";
+import "./VideoGridHeader.scss";
 
 export function VideoGridHeader(props: { title: React.ReactNode }) {
   return (

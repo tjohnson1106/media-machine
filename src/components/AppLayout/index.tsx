@@ -3,12 +3,13 @@ import "./AppLayout.scss";
 import HeaderNav from "../../ui/HeaderNav";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode | any;
 }
-
 export function AppLayout(props: Props) {
-  <div className="app-layout">
-    <HeaderNav />
-    {props.children}
-  </div>;
+  return (
+    <div className="app-layout">
+      <HeaderNav />
+      {props.children}
+    </div>
+  );
 }

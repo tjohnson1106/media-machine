@@ -1,17 +1,20 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
-import HeaderNav from "./ui/HeaderNav";
-import SideBar from "./ui/SideBar";
+
 import Home from "./ui/Home";
+import { AppLayout } from "./components/AppLayout";
+import Watch from "./ui/Watch";
 
 const App: React.FC = () => {
   return (
-    <>
-      <HeaderNav />
-      <SideBar />
-      <Home />
-    </>
+    <AppLayout>
+      <Switch>
+        <Route path="/watch" Component={Watch} />
+        <Route path="/" Component={Home} />
+      </Switch>
+    </AppLayout>
   );
 };
 
