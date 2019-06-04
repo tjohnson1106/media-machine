@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 
-import { Video } from "../../components/Video";
+// import { Video } from "../../components/Video";
 import "./Watch.scss";
-import VideoPreview from "../../components/VideoPreview";
+import { RelatedVideos } from "../../components/RelatedVideos";
+// import VideoPreview from "../../components/VideoPreview";
 
 export class Watch extends Component {
   render() {
     return (
-      <>
-        <VideoPreview horizontal={true} />
-        <VideoPreview />
-      </>
+      <RelatedVideos />
+      // {/* <VideoPreview horizontal={true} />
+      // <VideoPreview /> */}
     );
   }
 }
