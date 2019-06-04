@@ -2,12 +2,18 @@ import React, { Component } from "react";
 import { Image } from "semantic-ui-react";
 
 import "./VideoPreview.scss";
+import { StringLiteral } from "@babel/types";
 
-class VideoPreview extends Component {
+interface Props {
+  horizontal?: boolean | string;
+}
+
+class VideoPreview extends Component<Props> {
   state = {};
   render() {
+    const horizontal = this.props.horizontal ? "horizontal" : null;
     return (
-      <div className="video-preview">
+      <div className={["video-preview", horizontal].join("")}>
         <div className="image-container">
           <Image src="http://via.placeholder.com/210x118" />
           <div className="time-label">
