@@ -1,13 +1,19 @@
 import React, { Component } from "react";
-import VideoPreview from "../../components/VideoPreview";
+import { VideoGrid } from "../../components/VideoGrid";
+import SideBar from "../SideBar";
 
 class Home extends Component {
-  state = {};
   render() {
     return (
-      <div className="home">
-        <VideoPreview />
-      </div>
+      <>
+        <SideBar />
+        <div className="home">
+          <div className="responsive-video-home-container">
+            <VideoGrid title="Trending" />
+            <VideoGrid title="Some topic" hideDivider={true} />
+          </div>
+        </div>
+      </>
     );
   }
 }
