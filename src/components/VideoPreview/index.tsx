@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Image } from "semantic-ui-react";
 
 import "./VideoPreview.scss";
-import { StringLiteral } from "@babel/types";
 
 interface Props {
   horizontal?: boolean | string;
