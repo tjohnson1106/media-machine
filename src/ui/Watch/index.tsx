@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import "./Watch.scss";
 import { Video } from "../../components/Video";
+import "./Watch.scss";
 
-class Watch extends Component {
+export class Watch extends Component {
   state = {};
   render() {
     return (
@@ -13,5 +13,3 @@ class Watch extends Component {
     );
   }
 }
-
-export default Watch;

@@ -5,7 +5,7 @@ import "./App.css";
 
 import Home from "./ui/Home";
 import { AppLayout } from "./components/AppLayout";
-import Watch from "./ui/Watch";
+import { Watch } from "./ui/Watch";
 
 const App: React.FC = () => {
   return (
