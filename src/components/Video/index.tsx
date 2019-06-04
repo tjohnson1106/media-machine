@@ -4,13 +4,21 @@ import "./Video.scss";
 
 const BASE_EMBED_URL = "https://www.youtube.com/embed/";
 
-export function Video(props: { id: any }) {
+interface Props {
+  className?: JSX.IntrinsicAttributes &
+    React.ClassAttributes<HTMLDivElement> &
+    React.HTMLAttributes<HTMLDivElement> &
+    string;
+  id?: any;
+}
+
+export function Video(props: Props) {
   if (!props.id) {
     return null;
   }
   const embedUrl = `${BASE_EMBED_URL}${props.id}`;
   return (
-    <div className="container">
+    <div className="container" {...props.className}>
       <div className="video">
         <iframe
           width="560"
