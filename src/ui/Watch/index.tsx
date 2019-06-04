@@ -4,9 +4,9 @@ import { Video } from "../../components/Video";
 import "./Watch.scss";
 
 export class Watch extends Component {
-  state = {};
   render() {
     return (
+      // div width for testing only
       <div style={{ maxWidth: "80%" }}>
         <Video id="-7fuHEEmEjs" />
       </div>

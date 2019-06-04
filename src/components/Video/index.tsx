@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./Video.scss";
 
 const BASE_EMBED_URL = "https://www.youtube.com/embed/";
@@ -9,16 +10,18 @@ export function Video(props: { id: any }) {
   }
   const embedUrl = `${BASE_EMBED_URL}${props.id}`;
   return (
-    <div>
-      <iframe
-        width="560"
-        height="315"
-        src={embedUrl}
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-        title={"video"}
-      />
+    <div className="container">
+      <div className="video">
+        <iframe
+          width="560"
+          height="315"
+          src={embedUrl}
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          title={"video"}
+        />
+      </div>
     </div>
   );
 }
