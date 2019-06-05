@@ -4,6 +4,7 @@ import { Video } from "../../components/Video";
 import "./Watch.scss";
 import { RelatedVideos } from "../../components/RelatedVideos";
 import { VideoMetadata } from "../../components/VideoMetadata";
+import { VideoInfoBox } from "../../components/VideoInfoBox";
 
 export class Watch extends Component {
   render() {
@@ -11,6 +12,7 @@ export class Watch extends Component {
       <div className="watch-grid">
         <Video className="video" id="-7fuHEEmEjs" />
         <VideoMetadata className="metadata" viewCount={1000} />
+        <VideoInfoBox className="video-info-box" />
 
         <div
           className="metadata"
