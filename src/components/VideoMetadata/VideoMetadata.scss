@@ -15,4 +15,11 @@
     width: 100%;
     align-items: center;
   }
+  .video-actions {
+    display: flex;
+    align-items: center;
+    & > *:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
 }
