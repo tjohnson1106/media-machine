@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Divider, Icon } from "semantic-ui-react";
 
+import { Rating } from "../Rating";
 import "./VideoMetadata.scss";
 
 interface Props {
@@ -19,7 +20,21 @@ export function VideoMetadata(props: Props) {
 
       <div className="video-stats">
         <span>{viewCount} views</span>
-        <div>{/* TODO */}</div>
+        <div className="video-actions">
+          <Rating likeCount={1000} dislikeCount={100} />
+
+          <Button basic icon labelPosition="left">
+            <Icon name="share" />
+            Share
+          </Button>
+
+          <Button basic icon>
+            <Icon name="add circle" />
+          </Button>
+          <Button basic icon>
+            <Icon name="ellipsis horizontal" />
+          </Button>
+        </div>
       </div>
       <Divider />
     </div>
