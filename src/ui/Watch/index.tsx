@@ -3,12 +3,14 @@ import React, { Component } from "react";
 import { Video } from "../../components/Video";
 import "./Watch.scss";
 import { RelatedVideos } from "../../components/RelatedVideos";
+import { VideoMetadata } from "../../components/VideoMetadata";
 
 export class Watch extends Component {
   render() {
     return (
       <div className="watch-grid">
         <Video className="video" id="-7fuHEEmEjs" />
+        <VideoMetadata className="metadata" viewCount={1000} />
 
         <div
           className="metadata"
