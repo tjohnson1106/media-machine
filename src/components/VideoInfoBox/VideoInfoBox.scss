@@ -27,4 +27,17 @@
     grid-row: 1 / 2;
     grid-column: 3 / 4;
   }
+  .video-description {
+    p {
+      line-height: 1.4rem;
+      margin-bottom: 0;
+    }
+    .collapsed {
+      max-height: 2.8rem;
+      overflow-y: hidden;
+    }
+    .expanded {
+      max-height: none;
+    }
+  }
 }
