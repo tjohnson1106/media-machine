@@ -15,7 +15,13 @@
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
+  //ts isssue
   .video-info-box {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  //ts isssue
+  VideoInfoBox {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
