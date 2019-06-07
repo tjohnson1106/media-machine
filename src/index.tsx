@@ -9,6 +9,8 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+// TODO Get Youtube API key (part 19)
+
 const store = configureStore();
 
 ReactDOM.render(
