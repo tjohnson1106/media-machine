@@ -4,7 +4,7 @@ import { Button, Image } from "semantic-ui-react";
 import { Rating } from "../../../components/Rating";
 import "./Comment.scss";
 
-// add props
+// props
 export function Comment() {
   return (
     <div className="comment">
