@@ -1,6 +1,7 @@
-export default function(actions = {}, action: { type: any }) {
-  switch (action.type) {
-    default:
-      return actions;
-  }
+export function createAction(type: string, payload = {}) {
+  return {
+    // array type
+    type,
+    ...payload
+  };
 }
