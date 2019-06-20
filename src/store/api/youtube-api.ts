@@ -72,3 +72,29 @@ function createResource(properties: any) {
   }
   return resource as any;
 }
+
+export function buildMostPopularVideosRequest(
+  amount: number = 12,
+  loadDescription: boolean = false,
+  nextPageToken: any
+) {
+  let fields =
+    "nextPageToken,prevPageToken,items(contentDetails/duration,id,snippet(channelId,channelTitle,localized/title,publishedAt,thumbnails/medium,title),statistics/viewCount),pageInfo(totalResults)";
+  if (loadDescription) {
+    fields += ",items/snippet/description";
+  }
+
+  return buildApiRequest(
+    "GET",
+    "/youtube/v3/videos",
+    {
+      part: "snippet,statistics,contentDetails",
+      chart: "mostPopular",
+      maxResults: amount,
+      regionCode: "US",
+      pageToken: nextPageToken,
+      fields
+    },
+    null
+  );
+}
