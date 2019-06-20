@@ -11,12 +11,12 @@ import { Watch } from "./ui/Watch";
 import { youtubeLibraryLoaded } from "./store/actions/api";
 
 const API_KEY = "AIzaSyBeHDktLNXphSNGAkhOSXQ0FvGAjY1S0Hds";
-interface Youtube {
-  gapi: any;
-  youtubeLibraryLoaded: string;
+
+interface Tube {
+  youtubeLibraryLoaded: string | any;
 }
 
-class App extends Component<Youtube, {}> {
+class App extends Component<Tube, {}> {
   componentDidMount() {
     this.loadYoutubeApi();
   }
@@ -26,13 +26,18 @@ class App extends Component<Youtube, {}> {
     script.src = "https://apis.google.com/js/client.js";
 
     script.onload = () => {
+      // @ts-ignore
       window.gapi.load("client", () => {
+        // @ts-ignore
         window.gapi.client.setApiKey(API_KEY);
+        // @ts-ignore
         window.gapi.client.load("youtube", "v3", () => {
           this.props.youtubeLibraryLoaded();
         });
       });
     };
+
+    document.body.append(script);
   }
 
   render() {
@@ -47,4 +52,11 @@ class App extends Component<Youtube, {}> {
   }
 }
 
-export default App;
+function mapDispatchToProps(dispatch: any) {
+  return bindActionCreators({ youtubeLibraryLoaded }, dispatch);
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
