@@ -4,9 +4,9 @@ import createSagaMiddleware from "redux-saga";
 import reducer from "./reducers";
 import rootSaga from "./sagas";
 
-interface DevTool extends Window {
-  _REDUX_DEVTOOLS_EXTENSION_COMPOSE_: any;
-}
+// interface DevTool extends Window {
+//   _REDUX_DEVTOOLS_EXTENSION_COMPOSE_: any;
+// }
 
 export function configureStore() {
   const sagaMiddleware = createSagaMiddleware();
@@ -15,6 +15,10 @@ export function configureStore() {
     //   @ts-ignore
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-  const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+  const store = createStore(
+    reducer,
+    composeEnhancers(applyMiddleware(sagaMiddleware))
+  );
   sagaMiddleware.run(rootSaga);
+  return store;
 }
